@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Acerca() {
   return (
     <div style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto' }}>
@@ -28,7 +30,7 @@ function Acerca() {
       </div>
       
       <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-        <a href="/" style={{
+        <Link to="/" style={{
           padding: '1rem 2rem',
           background: '#6b7280',
           color: 'white',
@@ -37,7 +39,7 @@ function Acerca() {
           fontSize: '1.1rem'
         }}>
           ← Volver al inicio
-        </a>
+        </Link>
       </div>
     </div>
   )

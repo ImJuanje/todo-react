@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Home() {
   return (
      <div style={{ 
@@ -34,7 +36,7 @@ function Home() {
       </div>
       
       <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-        <a href="/dashboard" style={{
+        <Link to="/dashboard" style={{
           padding: '1rem 2rem',
           background: '#3b82f6',
           color: 'white',
@@ -43,7 +45,7 @@ function Home() {
           fontSize: '1.1rem'
         }}>
           Ir al Dashboard →
-        </a>
+        </Link>
       </div>
     </div>
   )

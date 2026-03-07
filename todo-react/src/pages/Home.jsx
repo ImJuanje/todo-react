@@ -1,9 +1,17 @@
 function Home() {
   return (
-    <div style={{ padding: '8rem 2rem 4rem 2rem', width: '100%' }}>
-      <h1>🚀 Bienvenido a mi App React</h1>
-      <p>Esta es una aplicación fullstack construida con:</p>
-      
+     <div style={{ 
+      padding: '8rem 2rem 4rem',  // Navbar arriba
+      maxWidth: '1000px',
+      margin: '0 auto',
+      width: '100%'
+    }}>
+      <h1 style={{ textAlign: 'center', color: '#1f2937', fontSize: '3rem', marginBottom: '1rem' }}>
+        🚀 Bienvenido a mi App React
+      </h1>
+      <p style={{ textAlign: 'center', color: '#6b7280', fontSize: '1.2rem', marginBottom: '3rem' }}>
+        Dashboard fullstack con React + Router
+      </p>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
         <div style={{ padding: '2rem', border: '2px solid #3b82f6', borderRadius: '12px' }}>
           <h3>📱 Frontend</h3>

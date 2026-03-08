@@ -1,19 +1,25 @@
   import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
   import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
   import { TodoProvider } from './contexts/TodoContext'
+  import { AuthProvider } from './contexts/AuthContext'
   import Navbar from './components/Navbar'
   import Home from './pages/Home'
   import Dashboard from './pages/Dashboard'
   import Acerca from './pages/Acerca'
   import Usuarios from './pages/Usuarios'
   import UsuariosDetalle   from './pages/UsuariosDetalle'
+  import Login from './pages/Login'
+  import Leads from './pages/Leads'
+
+
 
   // Creas la instancia del cliente de caché
   const queryClient = new QueryClient()
 
   function App() {
-    return (
-      <QueryClientProvider client={queryClient}>
+  return (
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
         <Router>
           <TodoProvider>
             <div style={{ 
@@ -38,13 +44,16 @@
                       <a href="/" style={{ color: '#3b82f6' }}>← Volver al inicio</a>
                     </div>
                   } />
+                  <Route path="/login" element={<Login/>} />
+                  <Route path="/leads" element={<Leads/>} />
                 </Routes>
               </main>
             </div>
           </TodoProvider>
         </Router>
-      </QueryClientProvider>
-    )
-  }
+      </AuthProvider>
+    </QueryClientProvider>
+  )
+}
 
   export default App
